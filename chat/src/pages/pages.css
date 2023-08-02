@@ -48,7 +48,21 @@ form {
     justify-content: center;
     flex-direction: column;
     row-gap: 30px;
+}
+
+form[name="login"], form[name="signin"] {
     width: 100%;
+}
+
+.profile_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+form[name="profile"] {
+    width: 510px;
 }
 
 .button {

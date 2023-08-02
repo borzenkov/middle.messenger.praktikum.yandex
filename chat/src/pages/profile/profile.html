@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<div class="profile_container">
+    <form name="profile" action="#" method="get">
+        {{> input type="email" label="Почта" name="email"}}
+        {{> input type="text" label="Логин" name="login"}}
+        {{> input type="text" label="Имя" name="first_name"}}
+        {{> input type="text" label="Фамилия" name="second_name"}}
+        {{> input type="text" label="Имя в чате" name="display_name"}}
+        {{> input type="text" label="Телефон" name="phone"}}
+        {{> button class="button secondary_button" label="Изменить данные"}}
+        {{> button class="button secondary_button" label="Изменить пароль"}}
+        {{> button class="button secondary_button" label="Выйти"}}
+    </form>
+</div>
+</body>
+</html>
