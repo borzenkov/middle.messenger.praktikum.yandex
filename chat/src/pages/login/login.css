@@ -1,0 +1,150 @@
+*,
+:before,
+:after {
+    box-sizing: border-box;
+    font-family: Sans-Serif, serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.paper {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.login {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+
+.title {
+    font-size: 20px;
+}
+
+form[name="login"] {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+}
+
+button {
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+}
+
+$color-main: #2a5ef1;
+
+.login_button {
+    background-color: $color-main;
+    color: white;
+    &:hover {
+        background-color: #0f4bf0;
+    }
+    &:active {
+        background-color: #3f6ff3;
+    }
+}
+
+.signin_button {
+    background-color: white;
+    color: $color-main;
+    &:hover {
+        background-color: #e6e6e6;
+    }
+    &:active {
+        background-color: #f2f2f2;
+    }
+}
+
+$bg-color: #424242;
+$muted-color: #8e8e8e;
+$trans-time: 300ms;
+$width: 100%;
+
+.group {
+    position: relative;
+}
+
+input {
+    background: none;
+    font-size: 18px;
+    padding: 10px 10px 10px 0px;
+    display: block;
+    width: $width;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $color-main;
+    &:focus {
+        outline: none;
+    }
+    &:focus ~ label,
+    &:valid ~ label {
+        top: -14px;
+        font-size: 12px;
+    }
+    &:focus ~ .bar:before {
+        width: $width;
+    }
+}
+
+label {
+    color: $muted-color;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    //left: 5px;
+    top: 10px;
+    transition: $trans-time ease all;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: $width;
+    &:before {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 0;
+        position: absolute;
+        background: $color-main;
+        transition: $trans-time ease all;
+        left: 0;
+    }
+}
+
+.error-message {
+    color: #ff2929;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 5px 0 0;
+}
