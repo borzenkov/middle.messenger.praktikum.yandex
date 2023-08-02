@@ -1,3 +1,9 @@
+$color-main: #2a5ef1;
+$bg-color: #424242;
+$muted-color: #8e8e8e;
+$trans-time: 300ms;
+$width: 100%;
+
 *,
 :before,
 :after {
@@ -25,9 +31,6 @@ body {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     padding: 30px;
     border-radius: 12px;
-}
-
-.login {
     width: 500px;
     display: flex;
     justify-content: center;
@@ -40,7 +43,7 @@ body {
     font-size: 20px;
 }
 
-form[name="login"] {
+form {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -48,7 +51,7 @@ form[name="login"] {
     width: 100%;
 }
 
-button {
+.button {
     border-radius: 8px;
     cursor: pointer;
     padding: 15px 32px;
@@ -59,9 +62,7 @@ button {
     border: none;
 }
 
-$color-main: #2a5ef1;
-
-.login_button {
+.primary_button {
     background-color: $color-main;
     color: white;
     &:hover {
@@ -72,7 +73,7 @@ $color-main: #2a5ef1;
     }
 }
 
-.signin_button {
+.secondary_button {
     background-color: white;
     color: $color-main;
     &:hover {
@@ -82,11 +83,6 @@ $color-main: #2a5ef1;
         background-color: #f2f2f2;
     }
 }
-
-$bg-color: #424242;
-$muted-color: #8e8e8e;
-$trans-time: 300ms;
-$width: 100%;
 
 .group {
     position: relative;
@@ -120,7 +116,7 @@ label {
     font-weight: normal;
     position: absolute;
     pointer-events: none;
-    //left: 5px;
+//left: 5px;
     top: 10px;
     transition: $trans-time ease all;
 }
