@@ -9,4 +9,14 @@ export default defineConfig({
             username: 'Виктор'
         }
     })],
+    build: {
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, 'index.html'),
+                login: resolve(__dirname, 'src/pages/login/login.html'),
+                signin: resolve(__dirname, 'src/pages/signin/signin.html'),
+                profile: resolve(__dirname, 'src/pages/profile/profile.html'),
+            },
+        },
+    },
 })
