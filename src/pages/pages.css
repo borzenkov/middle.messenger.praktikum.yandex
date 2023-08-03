@@ -150,7 +150,7 @@ label {
     }
 }
 
-.error-message {
+.error_message {
     color: #ff2929;
     display: inline-block;
     font-size: 12px;
