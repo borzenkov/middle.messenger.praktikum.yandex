@@ -5,9 +5,6 @@ import { resolve } from 'path';
 export default defineConfig({
     plugins: [handlebars({
         partialDirectory: resolve(__dirname, 'src/partials'),
-        context: {
-            username: 'Виктор'
-        }
     })],
     build: {
         rollupOptions: {

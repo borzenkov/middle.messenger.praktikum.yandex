@@ -157,3 +157,15 @@ label {
     line-height: 15px;
     margin: 5px 0 0;
 }
+
+.back_button {
+    position: absolute;
+    width: 65px;
+    height: 100%;
+    background-color: #fafafa;
+    cursor: pointer;
+    border-right: solid #e7e7e7 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
