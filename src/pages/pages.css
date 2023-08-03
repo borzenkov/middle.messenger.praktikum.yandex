@@ -130,7 +130,6 @@ label {
     font-weight: normal;
     position: absolute;
     pointer-events: none;
-//left: 5px;
     top: 10px;
     transition: $trans-time ease all;
 }
