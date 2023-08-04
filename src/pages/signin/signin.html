@@ -6,21 +6,19 @@
     <link rel="stylesheet" href="../pages.css">
 </head>
 <body>
-<div class="container">
-    {{#>page}}
-        <div class="title">Регистрация</div>
-        <form name="signin" action="#" method="get">
-            {{> input type="email" label="Почта" name="email"}}
-            {{> input type="text" label="Логин" name="login"}}
-            {{> input type="text" label="Имя" name="first_name"}}
-            {{> input type="text" label="Фамилия" name="second_name"}}
-            {{> input type="text" label="Телефон" name="phone"}}
-            {{> input type="password" label="Пароль" name="password"}}
-            {{> input type="password" label="Пароль (ещё раз)" name="password_again"}}
-            {{> button class="button primary_button" label="Зарегистрироваться"}}
-            {{> redirect-button href="../login/login.html" label="Войти" class="button secondary_button"}}
-        </form>
-    {{/page}}
-</div>
+{{#>page}}
+    <div class="title">Регистрация</div>
+    <form name="signin" action="#" method="get">
+        {{> input type="email" label="Почта" name="email"}}
+        {{> input type="text" label="Логин" name="login"}}
+        {{> input type="text" label="Имя" name="first_name"}}
+        {{> input type="text" label="Фамилия" name="second_name"}}
+        {{> input type="text" label="Телефон" name="phone"}}
+        {{> input type="password" label="Пароль" name="password"}}
+        {{> input type="password" label="Пароль (ещё раз)" name="password_again"}}
+        {{> button class="button primary_button" label="Зарегистрироваться"}}
+        {{> redirect-button href="../login/login.html" label="Войти" class="button secondary_button"}}
+    </form>
+{{/page}}
 </body>
 </html>

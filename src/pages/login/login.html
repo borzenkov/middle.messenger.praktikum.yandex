@@ -6,17 +6,14 @@
     <link rel="stylesheet" href="../pages.css">
 </head>
 <body>
-<div class="container">
-    {{#>page}}
-        <div class="title">Вход</div>
-        <form name="login" action="#" method="get">
-            {{> input type="text" label="Логин" name="login" error_message="Неверный логин"}}
-            {{> input type="password" label="Пароль" name="password"}}
-            {{> button class="button primary_button" label="Войти"}}
-            {{> redirect-button href="../signin/signin.html" label="Нет аккаунта?" class="button secondary_button"}}
-        </form>
-    {{/page}}
-</div>
-
+{{#>page}}
+    <div class="title">Вход</div>
+    <form name="login" action="#" method="get">
+        {{> input type="text" label="Логин" name="login" error_message="Неверный логин"}}
+        {{> input type="password" label="Пароль" name="password"}}
+        {{> button class="button primary_button" label="Войти"}}
+        {{> redirect-button href="../signin/signin.html" label="Нет аккаунта?" class="button secondary_button"}}
+    </form>
+{{/page}}
 </body>
 </html>
