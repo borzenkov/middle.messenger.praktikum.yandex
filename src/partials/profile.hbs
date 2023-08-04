@@ -14,14 +14,14 @@
             {{> input type="text" label="Телефон" name="phone"}}
         {{/if}}
         {{#if edit}}
-            {{> button class="button primary_button" label="Сохранить"}}
+            {{> redirect-button href="/src/pages/profile/profile.html" label="Сохранить" class="button primary_button"}}
         {{else}}
             {{#if editPassword}}
-                {{> button class="button primary_button" label="Сохранить"}}
+                {{> redirect-button href="/src/pages/profile/profile.html" label="Сохранить" class="button primary_button"}}
             {{else}}
-                {{> button class="button secondary_button" label="Изменить данные"}}
-                {{> button class="button secondary_button" label="Изменить пароль"}}
-                {{> button class="button secondary_button" label="Выйти"}}
+                {{> redirect-button href="/src/pages/profile/edit-profile.html" label="Изменить данные" class="button secondary_button"}}
+                {{> redirect-button href="/src/pages/profile/edit-password.html" label="Изменить пароль" class="button secondary_button"}}
+                {{> redirect-button href="/src/pages/login/login.html" label="Выйти" class="button secondary_button"}}
             {{/if}}
         {{/if}}
     </form>
