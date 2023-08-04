@@ -13,6 +13,8 @@ export default defineConfig({
                 login: resolve(__dirname, 'src/pages/login/login.html'),
                 signin: resolve(__dirname, 'src/pages/signin/signin.html'),
                 profile: resolve(__dirname, 'src/pages/profile/profile.html'),
+                changeProfile: resolve(__dirname, 'src/pages/profile/edit-profile.html'),
+                changePassword: resolve(__dirname, 'src/pages/profile/edit-password.html'),
             },
         },
     },

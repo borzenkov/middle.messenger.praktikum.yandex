@@ -1,0 +1,28 @@
+{{> back-button }}
+<div class="profile_container">
+    <form name="profile" action="#" method="get">
+        {{#if editPassword}}
+            {{> input type="password" label="Старый пароль" name="old_password"}}
+            {{> input type="password" label="Новый пароль" name="new_password"}}
+            {{> input type="password" label="Повторите новый пароль" name="new_password_again"}}
+        {{else}}
+            {{> input type="email" label="Почта" name="email"}}
+            {{> input type="text" label="Логин" name="login"}}
+            {{> input type="text" label="Имя" name="first_name"}}
+            {{> input type="text" label="Фамилия" name="second_name"}}
+            {{> input type="text" label="Имя в чате" name="display_name"}}
+            {{> input type="text" label="Телефон" name="phone"}}
+        {{/if}}
+        {{#if edit}}
+            {{> button class="button primary_button" label="Сохранить"}}
+        {{else}}
+            {{#if editPassword}}
+                {{> button class="button primary_button" label="Сохранить"}}
+            {{else}}
+                {{> button class="button secondary_button" label="Изменить данные"}}
+                {{> button class="button secondary_button" label="Изменить пароль"}}
+                {{> button class="button secondary_button" label="Выйти"}}
+            {{/if}}
+        {{/if}}
+    </form>
+</div>
