@@ -57,6 +57,7 @@ form[name="login"], form[name="signin"] {
 
 .profile_container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -99,6 +100,10 @@ form[name="profile"] {
     }
 }
 
+.button_warning {
+    color: red !important;
+}
+
 .group {
     position: relative;
 }
@@ -115,11 +120,6 @@ input {
     &:focus {
         outline: none;
     }
-    &:focus ~ label,
-    &:valid ~ label {
-        top: -14px;
-        font-size: 12px;
-    }
     &:focus ~ .bar:before {
         width: $width;
     }
@@ -127,12 +127,11 @@ input {
 
 label {
     color: $muted-color;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
-    top: 10px;
-    transition: $trans-time ease all;
+    top: -14px;
 }
 
 .bar {

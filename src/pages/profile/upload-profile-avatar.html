@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+{{#>page}}
+<div class="title">Загрузите файл</div>
+<form name="avatar" action="#" method="post">
+    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+    {{> redirect-button href="/src/pages/profile/profile.html" label="Поменять" class="button primary_button"}}
+</form>
+{{/page}}
+</body>
+</html>
