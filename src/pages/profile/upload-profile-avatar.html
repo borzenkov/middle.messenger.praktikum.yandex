@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="../pages.css">
 </head>
 <body>
-{{#>page}}
-<div class="title">Загрузите файл</div>
-<form name="avatar" action="#" method="post">
-    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
-    {{> redirect-button href="/src/pages/profile/profile.html" label="Поменять" class="button primary_button"}}
-</form>
-{{/page}}
+<main>
+    {{#>page}}
+        <div class="title">Загрузите файл</div>
+        <form name="avatar" action="#" method="post">
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+            {{> redirect-button href="/src/pages/profile/profile.html" label="Поменять" class="button primary_button"}}
+        </form>
+    {{/page}}
+</main>
 </body>
 </html>

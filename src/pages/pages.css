@@ -11,7 +11,7 @@ $width: 100%;
     font-family: Sans-Serif, serif;
 }
 
-html {
+html, main {
     height: 100%;
 }
 
