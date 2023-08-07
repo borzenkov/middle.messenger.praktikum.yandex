@@ -1,0 +1,29 @@
+{{> back-button }}
+<div class="profile_container">
+    {{> profile-avatar }}
+    <h3>{{user.displayName}}</h3>
+    <form name="profile" action="#" method="get">
+        {{#if editPassword}}
+            {{> input type="password" label="Старый пароль" name="old_password"}}
+            {{> input type="password" label="Новый пароль" name="new_password"}}
+            {{> input type="password" label="Повторите новый пароль" name="new_password_again"}}
+        {{else}}
+            {{#if edit}}
+                {{> profile-fields }}
+            {{else}}
+                {{> profile-fields disabled="disabled" }}
+            {{/if}}
+        {{/if}}
+        {{#if edit}}
+            {{> redirect-button href="/src/pages/profile/profile.html" label="Сохранить" class="button primary_button"}}
+        {{else}}
+            {{#if editPassword}}
+                {{> redirect-button href="/src/pages/profile/profile.html" label="Сохранить" class="button primary_button"}}
+            {{else}}
+                {{> redirect-button href="/src/pages/profile/edit-profile.html" label="Изменить данные" class="button secondary_button"}}
+                {{> redirect-button href="/src/pages/profile/edit-password.html" label="Изменить пароль" class="button secondary_button"}}
+                {{> redirect-button href="/src/pages/login/login.html" label="Выйти" class="button secondary_button button_warning"}}
+            {{/if}}
+        {{/if}}
+    </form>
+</div>

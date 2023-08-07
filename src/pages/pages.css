@@ -1,0 +1,171 @@
+$color-main: #2a5ef1;
+$bg-color: #424242;
+$muted-color: #8e8e8e;
+$trans-time: 300ms;
+$width: 100%;
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+    font-family: Sans-Serif, serif;
+}
+
+html, main {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.paper {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+
+.title {
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+form[name="login"], form[name="signin"] {
+    width: 100%;
+}
+
+.profile_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+form[name="profile"] {
+    width: 510px;
+}
+
+.button {
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+}
+
+.primary_button {
+    background-color: $color-main;
+    color: white;
+    &:hover {
+        background-color: #0f4bf0;
+    }
+    &:active {
+        background-color: #3f6ff3;
+    }
+}
+
+.secondary_button {
+    background-color: white;
+    color: $color-main;
+    &:hover {
+        background-color: #e6e6e6;
+    }
+    &:active {
+        background-color: #f2f2f2;
+    }
+}
+
+.button_warning {
+    color: red !important;
+}
+
+.group {
+    position: relative;
+}
+
+input {
+    background: none;
+    font-size: 18px;
+    padding: 10px 10px 10px 0px;
+    display: block;
+    width: $width;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $color-main;
+    &:focus {
+        outline: none;
+    }
+    &:focus ~ .bar:before {
+        width: $width;
+    }
+}
+
+label {
+    color: $muted-color;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    top: -14px;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: $width;
+    &:before {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 0;
+        position: absolute;
+        background: $color-main;
+        transition: $trans-time ease all;
+        left: 0;
+    }
+}
+
+.error_message {
+    color: #ff2929;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 5px 0 0;
+}
+
+.back_button {
+    position: absolute;
+    width: 65px;
+    height: 100%;
+    background-color: #fafafa;
+    cursor: pointer;
+    border-right: solid #e7e7e7 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
